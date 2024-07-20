@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://5igls0srjode"]
+
+[ext_resource type="Texture2D" uid="uid://dvxlnq7v2jmf6" path="res://assets/grid.png" id="1_ysjnk"]
+
+[node name="Board3x3" type="Sprite2D"]
+texture = ExtResource("1_ysjnk")
+metadata/_edit_lock_ = true

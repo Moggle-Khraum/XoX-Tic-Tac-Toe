@@ -1,0 +1,273 @@
+[gd_scene load_steps=7 format=3 uid="uid://cyns5oe6whqqx"]
+
+[ext_resource type="Script" path="res://game_scripts/credits.gd" id="1_ryr8p"]
+[ext_resource type="Texture2D" uid="uid://maj5pyr23xrt" path="res://assets/cross2.png" id="2_lyfcj"]
+[ext_resource type="FontFile" uid="uid://cslrf3qfio6w7" path="res://assets/Merathus.ttf" id="2_v4hl7"]
+[ext_resource type="Texture2D" uid="uid://oyq6hhfyf0wt" path="res://assets/yt-tutor.PNG" id="3_qfcc6"]
+[ext_resource type="Texture2D" uid="uid://bpov2qqc08oeo" path="res://assets/runtoe.PNG" id="4_o6m0j"]
+[ext_resource type="Texture2D" uid="uid://cisuye2m1buoe" path="res://assets/merathus.PNG" id="5_fp0kb"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ryr8p")
+metadata/_edit_lock_ = true
+
+[node name="BG_rect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -489.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.172549, 0.686275, 0.627451, 1)
+metadata/_edit_lock_ = true
+
+[node name="FG_rect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.796243, 0.796243, 0.796243, 1)
+metadata/_edit_lock_ = true
+
+[node name="goback_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 822.0
+offset_top = 4.0
+offset_right = 897.0
+offset_bottom = 68.0
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="goback_rect" type="TextureRect" parent="goback_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lyfcj")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="credits_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.115556
+anchor_top = 0.00166667
+anchor_right = 0.936667
+anchor_bottom = 0.19
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_v4hl7")
+theme_override_font_sizes/font_size = 70
+text = "> game credits <"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="credits_label0" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.204444
+anchor_top = 0.185
+anchor_right = 0.813333
+anchor_bottom = 0.345
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.988092, 0.01855, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_v4hl7")
+theme_override_font_sizes/font_size = 60
+text = "Youtube Tutorial:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="yt_rect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.348889
+anchor_top = 0.31
+anchor_right = 0.67
+anchor_bottom = 0.438333
+texture = ExtResource("3_qfcc6")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="credits_label1" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.212222
+anchor_top = 0.438333
+anchor_right = 0.821111
+anchor_bottom = 0.598333
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.988092, 0.01855, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_v4hl7")
+theme_override_font_sizes/font_size = 60
+text = "Fonts:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="runtoe_rect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.145556
+anchor_top = 0.565
+anchor_right = 0.487778
+anchor_bottom = 0.651667
+texture = ExtResource("4_o6m0j")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="merathus_rect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.507778
+anchor_top = 0.565
+anchor_right = 0.902222
+anchor_bottom = 0.651667
+texture = ExtResource("5_fp0kb")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="music_label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0655556
+anchor_top = 0.653333
+anchor_right = 0.434444
+anchor_bottom = 0.86
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.988092, 0.01855, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_v4hl7")
+theme_override_font_sizes/font_size = 60
+text = "Music:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="one_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0511111
+anchor_top = 0.786667
+anchor_right = 0.448889
+anchor_bottom = 0.946667
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.533333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_v4hl7")
+theme_override_font_sizes/font_size = 50
+text = "One - pheonton"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="sfx_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.476667
+anchor_top = 0.68
+anchor_right = 0.921111
+anchor_bottom = 0.84
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.988092, 0.01855, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_v4hl7")
+theme_override_font_sizes/font_size = 60
+text = "sound fx:"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="ninadsimic_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.468889
+anchor_top = 0.795
+anchor_right = 0.931111
+anchor_bottom = 0.93
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.533333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_v4hl7")
+theme_override_font_sizes/font_size = 50
+text = "click - ninadsimic"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="goback_button" to="." method="_on_goback_button_pressed"]

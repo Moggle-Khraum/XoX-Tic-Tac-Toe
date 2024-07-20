@@ -1,0 +1,145 @@
+[gd_scene load_steps=3 format=3 uid="uid://bygt3711hnbse"]
+
+[ext_resource type="FontFile" uid="uid://cslrf3qfio6w7" path="res://assets/Merathus.ttf" id="1_nhu68"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otsq5"]
+bg_color = Color(0.172549, 0.686275, 0.627451, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="GameOver" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchor_left = 0.0944444
+anchor_top = 0.161667
+anchor_right = 0.893333
+anchor_bottom = 0.846667
+offset_bottom = -3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="GameOver"]
+modulate = Color(1, 1, 1, 0.952941)
+layout_mode = 0
+offset_right = 721.0
+offset_bottom = 413.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_otsq5")
+metadata/_edit_lock_ = true
+
+[node name="Home" type="Button" parent="GameOver/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.525659
+anchor_top = 0.513317
+anchor_right = 0.900139
+anchor_bottom = 0.690073
+flat = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="HomeLabel" type="Label" parent="GameOver/Panel/Home"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -32.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_nhu68")
+theme_override_font_sizes/font_size = 60
+text = "> Home <"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_lock_ = true
+
+[node name="Retry" type="Button" parent="GameOver/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.040222
+anchor_top = 0.515738
+anchor_right = 0.417476
+anchor_bottom = 0.7046
+offset_right = -3.05176e-05
+flat = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="RetryLabel" type="Label" parent="GameOver/Panel/Retry"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_nhu68")
+theme_override_font_sizes/font_size = 60
+text = "> retry <"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_lock_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="GameOverLabel" type="Label" parent="GameOver/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.00004
+offset_top = -14.0002
+offset_right = 1.00006
+offset_bottom = 150.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_nhu68")
+theme_override_font_sizes/font_size = 102
+text = "Game over !"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_lock_ = true
+
+[node name="PlayerWinsLabel" type="Label" parent="GameOver/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00138702
+anchor_top = 0.27845
+anchor_right = 1.00139
+anchor_bottom = 0.510895
+offset_bottom = 1.52588e-05
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_nhu68")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true

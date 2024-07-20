@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlunm10h6ge6c"]
+
+[ext_resource type="Texture2D" uid="uid://njdktvoxpt5b" path="res://assets/grid4x4.png" id="1_x2muk"]
+
+[node name="Board4x4" type="Sprite2D"]
+scale = Vector2(0.748, 0.748)
+texture = ExtResource("1_x2muk")

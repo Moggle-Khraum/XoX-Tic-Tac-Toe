@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7dnroi7cpg8n"]
+
+[ext_resource type="AudioStream" uid="uid://77v6wb2jyhdt" path="res://assets/click_nenadsimic.wav" id="1_bg6si"]
+
+[node name="ClickSfx" type="AudioStreamPlayer"]
+stream = ExtResource("1_bg6si")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://eyqxsyrvs716"]
+
+[ext_resource type="AudioStream" uid="uid://dvtvgvt7cf6to" path="res://assets/one_0_pheonton.mp3" id="1_7jx3a"]
+[ext_resource type="Script" path="res://game_scripts/music.gd" id="2_mfo78"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_7jx3a")
+script = ExtResource("2_mfo78")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

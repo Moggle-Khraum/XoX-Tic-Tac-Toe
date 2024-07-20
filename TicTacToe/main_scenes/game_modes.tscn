@@ -1,0 +1,399 @@
+[gd_scene load_steps=8 format=3 uid="uid://6ul0m0cqdbs2"]
+
+[ext_resource type="Script" path="res://game_scripts/game_modes.gd" id="1_mi2jx"]
+[ext_resource type="FontFile" uid="uid://cslrf3qfio6w7" path="res://assets/Merathus.ttf" id="1_whr1u"]
+[ext_resource type="Texture2D" uid="uid://maj5pyr23xrt" path="res://assets/cross2.png" id="2_jlcdn"]
+[ext_resource type="Texture2D" uid="uid://dvxlnq7v2jmf6" path="res://assets/grid.png" id="3_n8k8k"]
+[ext_resource type="Texture2D" uid="uid://mahuept8jmwx" path="res://assets/circles2.png" id="4_h7kpf"]
+[ext_resource type="Texture2D" uid="uid://njdktvoxpt5b" path="res://assets/grid4x4.png" id="6_u7fv2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucn35"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.299547, 0.299547, 0.299547, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="GameModes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mi2jx")
+metadata/_edit_lock_ = true
+
+[node name="FG_rect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.796243, 0.796243, 0.796243, 1)
+metadata/_edit_lock_ = true
+
+[node name="BG_rect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.172549, 0.686275, 0.627451, 1)
+metadata/_edit_lock_ = true
+
+[node name="subtitle_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0977778
+anchor_top = 0.046667
+anchor_right = 0.908889
+anchor_bottom = 0.261667
+offset_left = 0.999999
+offset_top = -32.0002
+offset_right = 1.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0.533333, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_whr1u")
+theme_override_font_sizes/font_size = 80
+text = "> Game modes <"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="goback_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.912222
+anchor_top = 0.0116667
+anchor_right = 0.992222
+anchor_bottom = 0.113333
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="goback_rect" type="TextureRect" parent="goback_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jlcdn")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="3x3_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 220.0
+offset_right = 413.0
+offset_bottom = 475.0
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="3x3_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ucn35")
+metadata/_edit_lock_ = true
+
+[node name="grid3_label" type="Label" parent="3x3_button/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00806452
+anchor_top = 0.941176
+anchor_right = 0.983871
+anchor_bottom = 1.32941
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_whr1u")
+theme_override_font_sizes/font_size = 55
+text = "3 x 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="grid3_label2" type="Label" parent="3x3_button/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0241935
+anchor_top = 1.16471
+anchor_right = 1.0
+anchor_bottom = 1.5098
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_whr1u")
+theme_override_font_sizes/font_size = 55
+text = "grid"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="3x3_rect" type="TextureRect" parent="3x3_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -10.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_n8k8k")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="x_rect" type="TextureRect" parent="3x3_button/3x3_rect"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 75.0
+texture = ExtResource("2_jlcdn")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="o_rect" type="TextureRect" parent="3x3_button/3x3_rect"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 84.0
+offset_right = 229.0
+offset_bottom = 156.0
+texture = ExtResource("4_h7kpf")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="o_rect2" type="TextureRect" parent="3x3_button/3x3_rect"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 85.0
+offset_right = 151.0
+offset_bottom = 157.0
+texture = ExtResource("4_h7kpf")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="x_rect2" type="TextureRect" parent="3x3_button/3x3_rect"]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 163.0
+offset_right = 151.0
+offset_bottom = 237.0
+texture = ExtResource("2_jlcdn")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="4x4_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 221.0
+offset_right = 751.0
+offset_bottom = 476.0
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="4x4_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ucn35")
+metadata/_edit_lock_ = true
+
+[node name="grid4_label" type="Label" parent="4x4_button/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00806452
+anchor_top = 0.941176
+anchor_right = 0.983871
+anchor_bottom = 1.32941
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_whr1u")
+theme_override_font_sizes/font_size = 55
+text = "4 x 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="grid4_label2" type="Label" parent="4x4_button/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0241935
+anchor_top = 1.16471
+anchor_right = 1.0
+anchor_bottom = 1.5098
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_whr1u")
+theme_override_font_sizes/font_size = 55
+text = "grid"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="4x4_rect" type="TextureRect" parent="4x4_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = -9.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_u7fv2")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="x_rect" type="TextureRect" parent="4x4_button/4x4_rect"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 56.0
+offset_bottom = 57.0
+texture = ExtResource("2_jlcdn")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="x_rect2" type="TextureRect" parent="4x4_button/4x4_rect"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 120.0
+offset_right = 115.0
+offset_bottom = 176.0
+texture = ExtResource("2_jlcdn")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="x_rect3" type="TextureRect" parent="4x4_button/4x4_rect"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 61.0
+offset_right = 234.0
+offset_bottom = 117.0
+texture = ExtResource("2_jlcdn")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="o_rect" type="TextureRect" parent="4x4_button/4x4_rect"]
+layout_mode = 0
+offset_left = 118.0
+offset_right = 174.0
+offset_bottom = 56.0
+texture = ExtResource("4_h7kpf")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="o_rect2" type="TextureRect" parent="4x4_button/4x4_rect"]
+layout_mode = 0
+offset_top = 180.0
+offset_right = 56.0
+offset_bottom = 236.0
+texture = ExtResource("4_h7kpf")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="o_rect3" type="TextureRect" parent="4x4_button/4x4_rect"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 120.0
+offset_right = 174.0
+offset_bottom = 176.0
+texture = ExtResource("4_h7kpf")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="playGameLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 105.0
+offset_bottom = -396.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_whr1u")
+theme_override_font_sizes/font_size = 60
+text = "> Choose your grid size! <"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 2
+uppercase = true
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="goback_button" to="." method="_on_goback_button_pressed"]
+[connection signal="pressed" from="3x3_button" to="." method="_on_x_3_button_pressed"]
+[connection signal="pressed" from="4x4_button" to="." method="_on_x_4_button_pressed"]

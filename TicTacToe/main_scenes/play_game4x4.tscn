@@ -1,0 +1,144 @@
+[gd_scene load_steps=10 format=3 uid="uid://yh6n8mj4nyfo"]
+
+[ext_resource type="Script" path="res://game_scripts/main_scene4x4.gd" id="1_vtpta"]
+[ext_resource type="PackedScene" uid="uid://dlunm10h6ge6c" path="res://game_scenes/board4x4.tscn" id="2_6ppj6"]
+[ext_resource type="PackedScene" uid="uid://54uputsnjitv" path="res://game_scenes/circlex4.tscn" id="2_xi0xf"]
+[ext_resource type="PackedScene" uid="uid://b7wxc3046ilhb" path="res://game_scenes/crossx4.tscn" id="3_m5mc7"]
+[ext_resource type="FontFile" uid="uid://cslrf3qfio6w7" path="res://assets/Merathus.ttf" id="5_dxhft"]
+[ext_resource type="PackedScene" uid="uid://bygt3711hnbse" path="res://game_scenes/main_game_over.tscn" id="6_dow17"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fju6"]
+bg_color = Color(0.172802, 0.687037, 0.629089, 1)
+border_width_left = 5
+border_color = Color(0.0885599, 0.0885599, 0.0885598, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhyj4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.803922, 0.803922, 0.803922, 0.729412)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0.129558, 0.129558, 0.129558, 0.6)
+shadow_size = 4
+shadow_offset = Vector2(3, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iww6v"]
+
+[node name="Main_Scene" type="Node"]
+script = ExtResource("1_vtpta")
+circle_scene = ExtResource("2_xi0xf")
+cross_scene = ExtResource("3_m5mc7")
+
+[node name="Board4x4" parent="." instance=ExtResource("2_6ppj6")]
+position = Vector2(300, 300)
+scale = Vector2(0.747, 0.748)
+metadata/_edit_lock_ = true
+
+[node name="SidePanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(300, 600)
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4fju6")
+metadata/_edit_lock_ = true
+
+[node name="PlayerPanel" type="Panel" parent="."]
+top_level = true
+anchors_preset = -1
+anchor_left = 0.731111
+anchor_top = 0.556667
+anchor_right = 0.953333
+anchor_bottom = 0.89
+theme_override_styles/panel = SubResource("StyleBoxFlat_jhyj4")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="PlayerPanelx4" type="Panel" parent="."]
+top_level = true
+anchors_preset = -1
+anchor_left = 0.758889
+anchor_top = 0.601667
+anchor_right = 0.926667
+anchor_bottom = 0.848333
+theme_override_styles/panel = SubResource("StyleBoxEmpty_iww6v")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Node" parent="."]
+
+[node name="PlayerLabel" type="Label" parent="Label"]
+anchors_preset = -1
+anchor_left = 0.673333
+anchor_top = 0.21
+anchor_right = 1.00111
+anchor_bottom = 0.451667
+offset_right = -6.10352e-05
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_dxhft")
+theme_override_font_sizes/font_size = 90
+text = "Next"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="PlayerLabel2" type="Label" parent="Label"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -295.0
+offset_top = 208.0
+offset_bottom = -249.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_dxhft")
+theme_override_font_sizes/font_size = 90
+text = "Player"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_lock_ = true
+
+[node name="game_over" parent="." instance=ExtResource("6_dow17")]
+unique_name_in_owner = true
+process_mode = 2
+visible = false
+
+[node name="Panel" parent="game_over/GameOver" index="0"]
+modulate = Color(1, 1, 1, 0.917647)
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 600.0
+offset_bottom = 599.0
+
+[connection signal="pressed" from="game_over/GameOver/Panel/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="game_over/GameOver/Panel/Retry" to="." method="_on_retry_pressed"]
+
+[editable path="game_over"]

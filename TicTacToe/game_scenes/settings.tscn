@@ -1,0 +1,135 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgeuk0t4iaele"]
+
+[ext_resource type="FontFile" uid="uid://cslrf3qfio6w7" path="res://assets/Merathus.ttf" id="1_nhu68"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8q1vc"]
+bg_color = Color(0.172549, 0.686275, 0.627451, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.136387, 0.557392, 0.508933, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="game paused" type="CanvasLayer"]
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Panel2" type="Panel" parent="Control"]
+visible = false
+modulate = Color(1, 1, 1, 0.415686)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="Control"]
+modulate = Color(1, 1, 1, 0.976471)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0844444
+anchor_top = 0.158333
+anchor_right = 0.885556
+anchor_bottom = 0.846667
+theme_override_styles/panel = SubResource("StyleBoxFlat_8q1vc")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Modes" type="Button" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 253.0
+offset_right = 492.0
+offset_bottom = 358.0
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="ModesLabel" type="Label" parent="Control/Panel/Modes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_nhu68")
+theme_override_font_sizes/font_size = 60
+text = "> modes <"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Continue" type="Button" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.288488
+anchor_top = 0.329297
+anchor_right = 0.696255
+anchor_bottom = 0.610169
+flat = true
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="ContinueLabel" type="Label" parent="Control/Panel/Continue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_nhu68")
+theme_override_font_sizes/font_size = 60
+text = " > Continue <"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_lock_ = true
+
+[node name="pausedLabel" type="Label" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 145.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_nhu68")
+theme_override_font_sizes/font_size = 90
+text = "> game paused <"
+horizontal_alignment = 1
+autowrap_mode = 3
+uppercase = true
+metadata/_edit_lock_ = true
